@@ -1,0 +1,31 @@
+function generateHammingCode(d4, d3, d2, d1):
+	p1 = parity(d1, d2, d4) // Calculate parity for positions 1, 2, 4
+	p2 = parity(d1, d3, d4) // Calculate parity for positions 1, 3, 4
+	p3 = parity(d2, d3, d4) // Calculate parity for positions 2, 3, 4
+	return p1, p2, d1, p3, d2, d3, d4
+
+function decodeAndCorrectHammingCode(p1, p2, d1, p3, d2, d3, d4):
+	s1 = parity(p1, d1, d2, d4)
+	s2 = parity(p2, d1, d3, d4)
+	s3 = parity(p3, d2, d3, d4)
+	S = binary(s3, s2, s1) // Combine syndrome bits to find error position
+	if S ≠ 0:
+		flip the bit at position S in the code
+	return corrected d4, d3, d2, d1
+
+function calculateChecksum(dataBytes):
+	sum = 0
+	for byte in dataBytes:
+		sum += byte
+	checksum = sum mod 256
+	return checksum
+
+function verifyChecksum(dataBytes, originalChecksum):
+	sum = 0
+	for byte in dataBytes:
+		sum += byte
+	calculatedChecksum = sum mod 256
+	if calculatedChecksum == originalChecksum:
+		return True // Data is intact
+	else:
+		return False // Data is corrupted
