@@ -46,11 +46,14 @@ int main() {
 	system("g++ C++/Cc.cc -o C/Cc");
 	// system("clang `gnustep-config --objc-flags` -I/usr/lib/gcc/x86_64-linux-gnu/13/include -lgnustep-base -lobjc ObjC/objc.m -o ObjC/objc");
 	system("javac Java/java.java");
+	system("rustc Rust/rust.rs -o Rust/rust");
 
 	printf("Benchmarking...\n");
 
-	const int totalBenchmarks = 6; // Update this count if you add/remove benchmarks
+	const int totalBenchmarks = 7; // Update this count if you add/remove benchmarks
 	int completedBenchmarks = 0;
+
+	displayProgressBar(completedBenchmarks, totalBenchmarks);
 
 	double python3Time = measureExecutionTime("python3 Python3/python3.py");
 	displayProgressBar(++completedBenchmarks, totalBenchmarks);
@@ -73,6 +76,9 @@ int main() {
 	double javaTime = measureExecutionTime("java Java/java.java");
 	displayProgressBar(++completedBenchmarks, totalBenchmarks);
 
+	double rustTime = measureExecutionTime("./Rust/rust");
+	displayProgressBar(++completedBenchmarks, totalBenchmarks);
+
 	printf("\nAverage execution time:\n");
 	printf("Python3: %f seconds\n", python3Time);
 	printf("Python2: %f seconds\n", python2Time);
@@ -81,6 +87,7 @@ int main() {
 	printf("C#: %f seconds\n", csTime);
 	// printf("Objective-C: %f seconds\n", objcTime);
 	printf("Java: %f seconds\n", javaTime);
+	printf("Rust: %f seconds\n", rustTime);
 
 	return 0;
 }
