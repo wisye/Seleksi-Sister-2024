@@ -24,7 +24,7 @@ header = {
 
 payload = {
 	"fullname" : "Wisyendra Lunarmalam",
-	"link" : "pengen liat response lagi",
+	"link" : "https://github.com/wisye/Seleksi-Sister-2024/blob/main/Bagian%20A/18222095_1e802.pdf",
 	"message" : "MILF (Man I Love Furina), ku ngerjain bareng edbert buat sisparter"
 }
 
