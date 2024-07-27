@@ -9,6 +9,6 @@ def write_matrix_to_file(matrix, filename, n):
         for row in matrix:
             f.write(' '.join(map(str, row)) + '\n')
 
-n = 50
+n = 200
 matrix = generate_matrix(n)
 write_matrix_to_file(matrix, 'input.txt', n)

@@ -4,7 +4,7 @@ uses
   SysUtils;
 
 const
-  MaxN = 100;
+  MaxN = 200;
 
 type
   TMatrix = array[1..MaxN, 1..MaxN * 2] of Double;

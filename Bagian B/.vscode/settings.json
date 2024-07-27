@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"fstream": "cpp",
-		"string.h": "c"
+		"string.h": "c",
+		"time.h": "c"
 	}
 }
