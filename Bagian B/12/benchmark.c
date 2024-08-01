@@ -54,7 +54,6 @@ void *runBenchmark(void *arg) {
 		totalTime += (end.tv_sec - start.tv_sec);
 		totalTime += (end.tv_nsec - start.tv_nsec) / 1000000000.0;
 
-		// Update progress for each run
 		pthread_mutex_lock(&lock);
 		globalCompletedRuns++;
 		displayProgressBar(globalCompletedRuns, NUM_BENCHMARKS * NUM_RUNS);
@@ -121,7 +120,7 @@ int main() {
 	};
 	int completedBenchmarks = 0;
 
-	printf("Benchmarking inverse of 200x200 matrix...\n");
+	printf("Benchmarking inverse of 200x200 matrixxn");
 
 	for (int i = 0; i < NUM_BENCHMARKS; i += NUM_CORES) {
 		int count = 0;
