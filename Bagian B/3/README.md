@@ -1,0 +1,1 @@
+WIP, udah bikin full adder tapi males lanjutin lmaoo

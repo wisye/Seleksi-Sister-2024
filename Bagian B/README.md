@@ -1,0 +1,1 @@
+padahal bisa selesain no1, no3, no4, no6, sama no9 terus juga no8 sama no10 keliatannya gk terlalu ribet but i chose to main maimai and genshin mumpung liburan :ehe:. I dont want to be a hikikomori working on this, i wanna have fun while i can
