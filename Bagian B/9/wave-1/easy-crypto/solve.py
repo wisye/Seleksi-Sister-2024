@@ -8,4 +8,4 @@ xor_ct1_ct2 = bytes(a ^ b for a, b in zip(ct1_bytes, ct2_bytes))
 
 flag = bytes(a ^ b for a, b in zip(xor_ct1_ct2, leak))
 
-print(f'FLAG: {flag}')
+print(flag)

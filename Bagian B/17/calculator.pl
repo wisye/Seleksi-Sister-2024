@@ -1,3 +1,7 @@
+sub absolute {
+	my ($number) = @_;
+	return $number < 0 ? -$number : $number;
+}
 
 sub add {
 	my ($a, $b) = @_;
@@ -19,7 +23,7 @@ sub subtract {
 sub multiply {
 	my ($a, $b) = @_;
 	my $result = 0;
-	my $counter = abs($b);
+	my $counter = absolute($b);
 	my $negative = $b < 0;
 
 	MULTIPLY_LOOP:
@@ -35,8 +39,8 @@ sub divide {
 	my ($dividend, $divisor) = @_;
 	my $quotient = 0;
 	my $sign = ($dividend < 0) ^ ($divisor < 0) ? -1 : 1;
-	$dividend = abs($dividend);
-	$divisor = abs($divisor);
+	$dividend = absolute($dividend);
+	$divisor = absolute($divisor);
 
 	DIVIDE_LOOP:
 	if($dividend >= $divisor){
@@ -51,7 +55,7 @@ sub power {
 	my ($base, $exponent) = @_;
 	return 1 if $exponent == 0;
 	my $result = $base;
-	my $counter = abs($exponent);
+	my $counter = absolute($exponent);
 	my $negative = $exponent < 0;
 
 	POWER_LOOP:

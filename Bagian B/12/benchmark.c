@@ -120,7 +120,7 @@ int main() {
 	};
 	int completedBenchmarks = 0;
 
-	printf("Benchmarking inverse of 200x200 matrixxn");
+	printf("Benchmarking inverse of 200x200 matrix");
 
 	for (int i = 0; i < NUM_BENCHMARKS; i += NUM_CORES) {
 		int count = 0;
